@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let game = {
+            name: 'pvz',
+            up: function () { },
+            down: function () { }
+        };
+
+        // declare an object
+        let methods = {
+            up: Symbol(),
+            down: Symbol(),
+        };
+
+        game[methods.up] = function up(params) {
+            console.log('up up');
+        }
+
+        game[methods.down] = function down(params) {
+            console.log('down down');
+        }
+
+        console.log(game2);
+
+        let game2 = {
+            name: 'lrs',
+            [Symbol('say')]: function () {
+                console.log('say say');
+            },
+            [Symbol('boom')]: function () {
+                console.log('boom boom');
+            },
+        }
+
+        console.log(game2);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        // 1. Merging of arrays
+        let chopsticks = ['wtl', 'xy'];
+        let phoenix = ['zy', 'lh'];
+
+        let concat1 = chopsticks.concat(phoenix);
+        console.log(concat1);
+        let concat2 = [...chopsticks, ...phoenix];
+        console.log(concat2);
+
+        // 2. Array clone (shallow copy)
+        let arr1 = ['a', 'b', 'c'];
+        let arr2 = [...arr1];
+        console.log(arr1);
+        console.log(arr2);
+
+        // 3. Convert pseudo array to array
+        let divs = document.querySelectorAll('div');
+        console.log(divs);
+        let divArr = [...divs];
+        console.log(divArr);
+    </script>
+</body>
+
+</html>

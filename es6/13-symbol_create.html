@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // create Symbol
+        let s = Symbol();
+        console.log(s, typeof s);
+
+        let s2 = Symbol('silicon valley');
+        let s3 = Symbol('silicon valley');
+
+        console.log(s2 === s3);
+
+        let s4 = Symbol.for('silicon valley');
+        let s5 = Symbol.for('silicon valley');
+        console.log(s4, typeof s4);
+        console.log(s4 === s5);
+
+        // cannot operate with other data
+        // let result = s + 100;
+        // let result = s > 100;
+
+        // js data typr
+        // USONB
+        // u  undefined
+        // s  string  symbol
+        // o  object
+        // n  null number
+        // b  boolean
+    </script>
+</body>
+
+</html>

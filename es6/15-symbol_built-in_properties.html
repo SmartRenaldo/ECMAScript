@@ -1,0 +1,38 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+            // The Symbol.hasInstance well-known symbol is used to determine 
+            // if a constructor object recognizes an object as its instance.
+            // The instanceof operator's behavior can be customized by this symbol.
+            static [Symbol.hasInstance](param) {
+                console.log(param);
+                console.log('check type');
+
+                // return part shows the result of hasInstance
+                return false;
+            }
+        }
+
+        let o = {};
+        console.log(o instanceof Person);
+
+        // The Symbol.isConcatSpreadable well-known symbol is used to configure
+        // if an object should be flattened to its array elements when using the
+        // Array.prototype.concat() method.
+        const arr = [1, 2, 3];
+        const arr2 = [4, 5, 6];
+        arr2[Symbol.isConcatSpreadable] = false;
+        console.log(arr.concat(arr2));
+    </script>
+</body>
+
+</html>
