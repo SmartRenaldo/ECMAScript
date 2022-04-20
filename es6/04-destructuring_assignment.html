@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // The destructuring assignment syntax is a JavaScript expression that 
+        // makes it possible to unpack values from arrays, or properties from objects, 
+        // into distinct variables.
+        const F4 = ['Ted', 'Marshall', 'Lili', 'Barney'];
+        let [t, m, l, b] = F4;
+
+        console.log(t);
+        console.log(m);
+        console.log(l);
+        console.log(b);
+
+        // destructuring assignment for object
+        const ZHAO = {
+            name: 'zhao',
+            age: 'NaN',
+            xiaopin: function () {
+                console.log('I love xiaopin');
+            }
+        };
+
+        let {name, age, xiaopin} = ZHAO;
+        console.log(name);
+        console.log(age);
+        console.log(xiaopin);
+
+        xiaopin();
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ES6 allows defining functions using "arrows" (=>).
+        let sum = (a, b) => {
+            return a + b;
+        };
+
+        let res = sum(1, 3);
+        console.log(res);
+
+        // 1. 'this' is static. 'this' always points to the value of 
+        // 'this' in the scope where the function is declared
+        function getName() {
+            console.log(this.name);
+        }
+
+        let getName2 = () => {
+            console.log(this.name);
+        }
+
+        window.name = 'kangaroo';
+
+        // results of getName and getName2 are the same 
+        getName();
+        getName2();
+
+        const SCHOOL = {
+            name: 'UofA',
+        };
+
+        getName.call(SCHOOL);
+        getName2.call(SCHOOL);
+
+        // 2. cannot be used as constructor function
+        // let Person = (name, age) => {
+        //     this.name = name;
+        //     this.age = age;
+        // }
+
+        // 3. cannot use 'arguments' variable
+        // let fn = () => {
+        //     console.log(arguments);
+        // }
+
+        // 4. could be simplified
+        // 4.1 Omit parentheses when there is one and only one parameter
+        let add = n => {
+            return n + n;
+        };
+
+        console.log(add(9));
+
+        // 4.2 Omit curly braces, when the code body has only one statement, 
+        // then return must be omitted
+        // The result of the execution of the statement is the return value of the function
+        let pow = n => n * n;
+
+        console.log(pow(11));
+    </script>
+</body>
+
+</html>

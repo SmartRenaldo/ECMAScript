@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background: #58a;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ad"></div>
+    <script>
+        // Requirement 1: After clicking on the div 2s the color becomes pink
+        let ad = document.getElementById('ad');
+        // before
+        // ad.addEventListener('click', function () {
+        //     let _this = this;
+
+        //     setTimeout(function () {
+        //         _this.style.background = 'pink';
+        //     }, 2000);
+        // });
+        // after
+        ad.addEventListener('click', function () {
+            setTimeout(() => {
+                this.style.background = 'pink';
+            }, 2000);
+        });
+
+        // Requirement 2: return even numbers from an array
+        const ARR = [1, 7, 8, 9, 10, 50];
+        // before
+        const RESULT = ARR.filter(function (item) {
+            if (item % 2 == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        });
+        console.log(RESULT);
+        // after
+        const RESULT2 = ARR.filter(item => item % 2 === 0);
+        console.log(RESULT2);
+
+        // Arrow functions are suitable for callbacks not related to this. 
+        // Timers, method callbacks for arrays
+        // Arrow functions are not suitable for callbacks related to this. 
+        // Event callbacks, methods of objects
+    </script>
+</body>
+
+</html>

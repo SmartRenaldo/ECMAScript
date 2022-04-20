@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const SCHOOL = 'UoA';
+
+        // 1. Must assign initial value
+        // const A;
+        // 2. Use upper case
+        // const b = 100;
+        // 3. cannot be modified
+        // SCHOOL = 'NYU';
+        // 4. block-level scope
+        // {
+        //     const MILK = 'mn';
+        // }
+        // console.log(MILK);
+        // 5. For element modification of arrays and objects, 
+        // it does not count as constant modification, and no error will be reported
+        const TEAM = ['a','b','c','d'];
+        TEAM.push('e');
+        console.log(TEAM);
+    </script>
+</body>
+</html>

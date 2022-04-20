@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // declare vairables
+        let a;
+        let b,c,d;
+        let e,f = 99;
+        let g = 250, h=[], i="scash";
+
+        // 1. cannot declare same variable twice
+        // let star = "pig";
+        // let star = "xiang";
+
+        // 2. block-level scope
+        // {
+        //     let jj = 'jj';
+        // }
+        // console.log(jj);
+
+        // 3. 不存在变量提升
+        // console.log(song);
+        // let song = "qqqg";
+
+        // 4. Does not affect the scope chain
+        // (same as var in this example)
+        {
+            var school = 'ssg';
+            function fn(){
+                console.log(school);
+            }
+            fn();
+        }
+    </script>
+</body>
+</html>
