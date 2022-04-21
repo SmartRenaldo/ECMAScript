@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Requirement: Console output 'aaa' after 1s, 'bbb' after 2s, and 'ccc' after 3s
+        // Asynchronous programming: file operations, 
+        // network operations (ajax, request), database operations
+
+        // callback hell
+        // setTimeout(() => {
+        //     console.log('aaa');
+        //     setTimeout(() => {
+        //         console.log('bbb');
+        //         setTimeout(() => {
+        //             console.log('ccc');
+        //         }, 3000);
+        //     }, 2000);
+        // }, 1000);
+
+        function aaa() {
+            setTimeout(() => {
+                console.log('aaa');
+                iterator.next();
+            });
+        }
+
+        function bbb() {
+            setTimeout(() => {
+                console.log('bbb');
+                iterator.next();
+            });
+        }
+
+        function ccc() {
+            setTimeout(() => {
+                console.log('ccc');
+                iterator.next();
+            });
+        }
+
+        function* gen() {
+            yield aaa();
+            yield bbb();
+            yield ccc();
+        }
+
+        let iterator = gen();
+        iterator.next();
+    </script>
+</body>
+
+</html>
