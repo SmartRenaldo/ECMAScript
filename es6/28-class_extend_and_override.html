@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Phone {
+            constructor(name, size) {
+                this.name = name;
+                this.size = size;
+            }
+
+            call() {
+                console.log('call......');
+            }
+        }
+
+        class SmartPhone extends Phone {
+            constructor(name, size, color, price) {
+                super(name, size);
+                this.color = color;
+                this.price = price;
+            }
+
+            takePictures() {
+                console.log('take pictures...');
+            }
+
+            playGame() {
+                console.log('play game...');
+            }
+
+            // override method
+            call(){
+                console.log('call & video,...');
+            }
+        }
+
+        let sp = new SmartPhone('iPhone', '5.5inch', 'gold', 3500);
+        sp.call();
+        sp.takePictures();
+        sp.playGame();
+    </script>
+</body>
+
+</html>

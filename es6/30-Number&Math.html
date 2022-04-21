@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. Number.EPSILON is the minimum precision for JavaScript representation
+        // The value of the EPSILON is close to 2.2204460492503130808472633361816E-16
+        function equal(num1, num2) {
+            if (Math.abs(num1 - num2) < Number.EPSILON) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        console.log(0.1 + 0.2 === 0.3);
+        console.log(equal(0.1 + 0.2, 0.3))
+
+        // 2. Binary, Octal and Hexadecimal
+        let b = 0b1010;
+        let o = 0o777;
+        let d = 100;
+        let x = 0xff;
+
+        // 3. Number.isFinite - Check if a number is finite
+        console.log(Number.isFinite(1));
+        console.log(Number.isFinite(1 / 0));
+        console.log(Number.isFinite(Infinity));
+
+        // 4. Number.isFinite - Check if a number is NaN
+        console.log(Number.isNaN(1));
+
+        // 5. Number.parseInt & Number.parseFloat - String to number
+        console.log(Number.parseInt('5141455love'));
+        console.log(Number.parseFloat('3.1415926awesome'));
+
+        // 6. Number.isInteger - Check if a number is an integer
+        console.log(Number.isInteger(1));
+        console.log(Number.isInteger(0.5));
+
+        // 7. Math.trunc - Erase the decimal part of a number
+        console.log(Math.trunc(2.5));
+
+        // 8. Math.sign - Determine whether a number is positive, negative or zero
+        console.log(Math.sign(100));
+        console.log(Math.sign(0));
+        console.log(Math.sign(-100));
+    </script>
+</body>
+
+</html>

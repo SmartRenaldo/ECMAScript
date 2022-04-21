@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. Object.is - Check if two values are exactly equal
+        console.log(Object.is(11, 11));
+        console.log(Object.is(NaN, NaN));
+        console.log(NaN === NaN);
+
+        // 2. Object.assign - Object merging
+        const config1 = {
+            host: 'localhost',
+            port: 3306,
+            name: 'root',
+            pass: 'root',
+            test: 'test'
+        };
+        const config2 = {
+            host: 'https://www.youtube.com/',
+            port: 8080,
+            name: 'admin',
+            pass: 'admin',
+        }
+        console.log(Object.assign(config1, config2));
+
+        // 3. Object.setPrototypeOf, Object.getPrototypeof - prototype object
+        const school = {
+            name: 'NYU'
+        }
+        const cities = {
+            xiaoqu: ['SYDNEY','HONG KONG','SHANGHAI']
+        }
+        Object.setPrototypeOf(school, cities);
+        console.log(Object.getPrototypeOf(school));
+        console.log(school);
+    </script>
+</body>
+
+</html>
