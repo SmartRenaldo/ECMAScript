@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="module">
+        // 1. import
+        import * as m11 from './src/js/m1.js';
+        console.log(m11);
+
+        import * as m22 from './src/js/m2.js';
+        console.log(m22);
+
+        import * as m33 from './src/js/m3.js';
+        console.log(m33);
+
+        // 2. destructuring assignment
+        import { uni, teach } from './src/js/m1.js';
+        console.log(uni);
+        console.log(teach);
+
+        // use alias
+        import { uni as uni2, teach as teach2 } from './src/js/m2.js';
+        console.log(uni2, teach2);
+
+        import { default as d3 } from './src/js/m3.js';
+        console.log(d3);
+
+        // 3. Short form for default exposure
+        import m3 from "./src/js/m3.js";
+        console.log(m3);
+    </script>
+    <script src="./src/js/app.js" type="module">
+    </script>
+</body>
+
+</html>
