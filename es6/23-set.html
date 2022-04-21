@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let set = new Set();
+        let set2 = new Set(['good', 'bad', 'happy', 'sad', 'sad']);
+        console.log(set2);
+        set2.add('boring');
+        console.log(set2);
+        set2.delete('boring');
+        console.log(set2);
+
+        for (const v of set2) {
+            console.log(v);
+        }
+
+        set2.clear();
+        console.log(set2);
+    </script>
+</body>
+
+</html>

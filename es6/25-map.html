@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let map = new Map();
+        map.set('name', 'Jackson');
+        map.set('age', 18);
+        let key = {
+            school: 'HU',
+        }
+        map.set(key, ['beijing', 'new york', 'sydney', 'paris']);
+        console.log(map);
+
+        console.log(map.size);
+
+        map.delete('name');
+        console.log(map);
+
+        console.log(map.get('age'));
+        console.log(map.get(key));
+
+        console.log(map);
+
+        for (const item of map) {
+            console.log(item);
+        }
+
+        map.clear();
+        console.log(map);
+    </script>
+</body>
+
+</html>
