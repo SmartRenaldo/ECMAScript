@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const restaurant = {
+            name: 'KFC',
+            cities: ['sydney', 'melborune', 'adelaide'],
+            food: ['hamburger', 'french frice'],
+        }
+
+        // 1. get keys
+        console.log(Object.keys(restaurant));
+
+        // 2. get values
+        console.log(Object.values(restaurant));
+
+        // 3. get entries
+        console.log(Object.entries(restaurant));
+
+        // 4. create Map
+        const m = new Map(Object.entries(restaurant));
+        console.log(m);
+        console.log(m.get('cities'));
+
+        // 5. getOwnPropertyDescriptors
+        console.log(Object.getOwnPropertyDescriptors(restaurant));
+
+        let s = Object.create(null, {
+            name:{
+                value: 'ssg',
+                writable: true,
+                configurable: true,
+                // enumerable: I can access to all of them using a for..in loop.
+                // Also, enumerable property keys of an object are returned using Object.keys method.
+                // Defaults to true.
+                enumerable: true
+            }
+        });
+    </script>
+</body>
+</html>

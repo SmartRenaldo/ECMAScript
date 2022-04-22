@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Async await improves how we handle asynchronous code. 
+        // It is built on top of ES6 Promises (our rescue from callback hell) 
+        // and aims to give a cleaner and more concise syntax. 
+        // Similar to ES6 Classes and prototypal inheritance the async await 
+        // syntax is basically syntactic sugar for Promises.
+        // async function will return a Promise object
+
+        // 1. return string
+        async function fn() {
+            return 'ajax';
+        }
+        console.log(fn());
+
+        // 2. return nothing
+        async function fn2() {
+            return;
+        }
+        console.log(fn2());
+
+        // 3. throw error
+        async function fn3() {
+            throw new Error('err');
+        }
+        console.log(fn3());
+
+        //4. return Promise obj
+        async function fn4() {
+            return new Promise((resolve, reject) => {
+                resolve('success');
+            });
+        }
+        console.log(fn4());
+
+        let res = fn4();
+        res.then(value => {
+            console.log(value);
+        }, reason => {
+            console.error(reason);
+        });
+    </script>
+</body>
+
+</html>
