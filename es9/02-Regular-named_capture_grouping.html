@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a1 = '<a href="https://www.youtube.com/">YouTube</a>';
+        let reg = /<a href="(.*)">(.*)<\/a>/;
+        let res = reg.exec(a1);
+        console.log(res);
+
+        // group naming
+        let reg2 = /<a href="(?<url>.*)">(?<text>.*)<\/a>/;
+        let res2 = reg2.exec(a1);
+        console.log(res2.groups.url);
+        console.log(res2.groups.text);
+    </script>
+</body>
+</html>

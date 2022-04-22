@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // dot matchs any single character except a newline
+        let str = `
+        <ul>
+            <li>
+                <a>The Shawshank Redemption</a>
+                <p>release date: 1994-09-10</p>
+            </li>
+            <li>
+                <a>Forrest Gump</a>
+                <p>release date: 1994-07-06</p>
+            </li>
+        </ul>`;
+
+        const reg = /<li>.*?<a>(.*?)<\/a>.*?<p>(.*?)<\/p>/gs;
+        let result;
+        let data = [];
+
+        while(result = reg.exec(str)){
+            data.push({title: result[1], time: result[2]});
+        }
+
+        console.log(data);
+    </script>
+</body>
+</html>
