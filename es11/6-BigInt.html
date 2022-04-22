@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // BigInt is a primitive wrapper object used to represent and manipulate
+        // primitive bigint values — which are too large to be represented by the number primitive.
+        let n = 1111n;
+        console.log(n, typeof(n));
+
+        let max = Number.MAX_SAFE_INTEGER;
+        console.log(max);
+        console.log(max + 1);
+        console.log(max + 2);
+
+        console.log(BigInt(max))
+        console.log(BigInt(max) + BigInt(1))
+        console.log(BigInt(max) + BigInt(2))
+    </script>
+</body>
+</html>
